@@ -2,6 +2,18 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route("/platform")
+def platform():
+    #page="<h1>Platform</h1>"
+    #return page
+    return render_template("platform.html")
+
+@app.route("/people")
+def people():
+    #page="<h1>People</h1>"
+    #return page
+    return render_template("people.html")
+
 @app.route("/home")
 @app.route("/")
 def home():
